@@ -1,0 +1,12 @@
+<main>
+  <div class="flex flex-col pt-2 pb-2 pr-20 pl-20 bg-neutral-700">
+    <h2 class="text-white font-normal">New Stock Symbol</h2>
+    <input #symbolInput
+     class="p-1 rounded-lg shadow-md text-blue-950 font-medium" type="text">
+    <button
+    (click)="closeCurrentModal(symbolInput.value)"
+    class="mt-20 text-white border-2 border-white rounded-md w-1/2 pt-1 pb-1 self-center hover:scale-105">
+      OK
+    </button>
+  </div>
+</main>

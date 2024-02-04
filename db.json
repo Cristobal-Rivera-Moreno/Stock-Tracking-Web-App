@@ -1,0 +1,86 @@
+
+{"stock":[{
+  "id":"1",
+  "Global Quote": {
+    "Global Quote":{
+      "01. symbol": "GOOG",
+      "02. open": "140.8900",
+      "03. high": "143.8800",
+      "04. low": "138.1700",
+      "05. price": "143.5400",
+      "06. volume": "42136127",
+      "07. latest trading day": "2024-02-02",
+      "08. previous close": "142.7100",
+      "09. change": "0.8300",
+      "10. change percent": "0.5816%"
+    }
+  }
+},
+{
+  "id":"2",
+  "Global Quote": {
+    "Global Quote":{
+      "01. symbol": "LOIU",
+      "02. open": "140.8900",
+      "03. high": "143.8800",
+      "04. low": "138.1700",
+      "05. price": "143.5400",
+      "06. volume": "42136127",
+      "07. latest trading day": "2024-02-02",
+      "08. previous close": "142.7100",
+      "09. change": "0.8300",
+      "10. change percent": "0.5816%"
+    }
+  }
+
+
+},
+
+{
+  "id":"3",
+  "Global Quote": {
+    "Global Quote":{
+      "01. symbol": "ASDF",
+      "02. open": "140.8900",
+      "03. high": "43.8800",
+      "04. low": "18.1700",
+      "05. price": "13.5400",
+      "06. volume": "42136127",
+      "07. latest trading day": "2024-02-02",
+      "08. previous close": "142.7100",
+      "09. change": "0.8300",
+      "10. change percent": "0.5816%"
+    }
+  }
+
+
+},
+{
+  "id":"4",
+  "Global Quote": {
+    "Global Quote":{
+      "01. symbol": "zdtt",
+      "02. open": "140.8900",
+      "03. high": "143.8800",
+      "04. low": "138.1700",
+      "05. price": "43.5400",
+      "06. volume": "42136127",
+      "07. latest trading day": "2024-02-02",
+      "08. previous close": "142.7100",
+      "09. change": "0.8300",
+      "10. change percent": "0.5816%"
+    }
+  }
+
+
+}
+
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
