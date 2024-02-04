@@ -14,6 +14,6 @@ export class NewStockSymbolComponent {
 
   }
   closeCurrentModal(symbol:string):void{
-    this.dialogRef.close(symbol.trim())
+    this.dialogRef.close(symbol.trim());
   }
 }

@@ -15,7 +15,7 @@
 
       <div class="flex justify-between w-1/2 pr-64">
         <span class="">{{symbolData.symbol}}</span>
-        <span class="text-left ml-4">{{symbolData.price | number:'1.0-2'}}</span>
+        <span class="text-left ml-4">{{(symbolData.price | number:'1.0-2')??'Data isn\'t available'}}</span>
       </div>
       <div class="w-1/2 flex self-end justify-end">
         <img  class="w-4 h-5" srcset="assets/Stock_icon_images/Up_arrow_icon_3x.png" alt="" >

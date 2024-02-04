@@ -2,6 +2,7 @@
   <div class="flex flex-col pt-2 pb-2 pr-20 pl-20 bg-neutral-700">
     <h2 class="text-white font-normal">New Stock Symbol</h2>
     <input #symbolInput
+    (keyup.enter)="closeCurrentModal(symbolInput.value)"
      class="p-1 rounded-lg shadow-md text-blue-950 font-medium" type="text">
     <button
     (click)="closeCurrentModal(symbolInput.value)"

@@ -6,34 +6,36 @@ import { GlobalQuote } from '../models/GlobalQuote.model';
   providedIn: 'root'
 })
 export class AlphaRestApiService {
-  //httpClient = Inject(HttpClient)
-  apiUrl : string
+  apiUrl : string;
   constructor(private httpClient:HttpClient) {
-    //this.apiUrl = "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&apikey=VJ856XHXT0I8GR7N&symbol="
-    this.apiUrl   = "http://localhost:3000/stock"
+     this.apiUrl = "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&apikey=VJ856XHXT0I8GR7N&symbol=";
   }
 
   getOneSymbol(symbol:string):Observable<GlobalQuote>{
-    //return this.httpClient.get(`${this.apiUrl}${symbol}`)
-    return this.httpClient.get<GlobalQuote>(`${this.apiUrl}/${symbol}`)
+    return this.httpClient.get(`${this.apiUrl}${symbol}`)
     .pipe(map((res:any)=>{
-
-      res = res["Global Quote"]["Global Quote"]
-      return {
-        symbol             : res["01. symbol"],
-        open               : res["02. open"],
-        high               : res["03. high"],
-        low                : res["04. low"],
-        price              : res["05. price"],
-        volume             : res["06. volume"],
-        latest_trading_day : res["07. latest trading day"],
-        previous_close     : res["08. previous close"],
-        change             : res["09. change"],
-        change_percent     : res["10. change percent"]
-      } as GlobalQuote
-
+      if(res['Information']){
+        alert(`${symbol} Symbol Request. ${res['Information']}`);
+        return {symbol:symbol} as GlobalQuote;
+      }
+      res = res["Global Quote"]
+      if(Object.keys(res).length>0)
+        return {
+          symbol             : res["01. symbol"],
+          open               : res["02. open"],
+          high               : res["03. high"],
+          low                : res["04. low"],
+          price              : res["05. price"],
+          volume             : res["06. volume"],
+          latest_trading_day : res["07. latest trading day"],
+          previous_close     : res["08. previous close"],
+          change             : res["09. change"],
+          change_percent     : res["10. change percent"]
+        } as GlobalQuote
+      else
+        return {} as GlobalQuote
     }))
-    .pipe(retry(1),catchError(this.handleError))
+    .pipe(retry(1),catchError(this.handleError));
 
   }
 
